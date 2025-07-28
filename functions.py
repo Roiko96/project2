@@ -44,7 +44,7 @@ def sort_scores():
         for p in sorted_list:
             print(p["game"])
     elif choice == "3":
-        sorted_list = sorted(scores, key=lambda x: x["score"], reverse=True)
+        sorted_list = sorted(scores, key=lambda x: x["score"])
         for p in sorted_list:
             print(f"{p['name']} - {p['score']}")
     else:
