@@ -1,10 +1,10 @@
-FROM python:3.12-slim 
+FROM python:3.12-slim
 
 WORKDIR /app
 
-COPY . . 
+COPY . .
 
-RUN pip install flask
+RUN pip install -r requirements.txt
 
 EXPOSE 5000
 
