@@ -26,5 +26,5 @@ while True:
         print("goodbye, thanks for using!")
         break
     else:
-        print("iinvalid option.\n")
+        print("iinvalid option")
 
