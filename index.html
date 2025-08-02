@@ -1,3 +1,5 @@
+<!-- index.html - תבנית להצגת האתר -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,6 +34,24 @@
         <button type="submit">Sort by Score</button>
     </form>
 
+    <h2>Edit Score</h2>
+    <form action="/edit" method="post">
+        Current Name: <input type="text" name="name" required><br>
+        Current Game: <input type="text" name="game" required><br>
+        New Name: <input type="text" name="new_name"><br>
+        New Game: <input type="text" name="new_game"><br>
+        New Score: <input type="text" name="new_score"><br>
+        <button type="submit">Edit</button>
+    </form>
+
+    <h2>Average</h2>
+    <form action="/average" method="get">
+        <button type="submit">Show Average</button>
+    </form>
+    {% if average is defined %}
+        <h3>Average Score: {{ average }}</h3>
+    {% endif %}
+
     <h2>Scores List</h2>
     {% if scores %}
         <ul>
@@ -44,5 +64,3 @@
     {% endif %}
 </body>
 </html>
-
-
