@@ -57,12 +57,7 @@ no css or frontend styling, only the logic and one template.
 
 2. run container:
    ```
-   docker run -p 5000:5000 game-scoreboard
-   ```
-
-3. open in browser:
-   ```
-   http://localhost:5000
+   docker run -it game-scoreboard
    ```
 
 ---
