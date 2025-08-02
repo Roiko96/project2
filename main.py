@@ -1,6 +1,5 @@
 from functions import *
 
-
 while True:
     print("menu:")
     print("1. add score")
@@ -23,8 +22,9 @@ while True:
     elif choice == "5":
         average_score()
     elif choice == "6":
+        edit_score()
+    elif choice == "7":
         print("goodbye, thanks for using!")
         break
     else:
-        print("iinvalid option")
-
+        print("iinvalid option.\n")
