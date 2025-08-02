@@ -69,9 +69,8 @@ no css or frontend styling, only the logic and one template.
 2. create env: flask-dev or something you want and running this commands pls:
    ```
       sudo su
-   apt update
-   apt upgrade -y
-   apt install python3-flask
+   apt update && apt upgrade -y
+   apt install python3-flask / apt install -r requirements.txt
    mkdir templates
    mv index.html templates/
    cd templates/
@@ -87,7 +86,7 @@ no css or frontend styling, only the logic and one template.
    ```
    python app.py
    ```
-5. from the ec2 panel scroll right to PIP and copy the public ip and open in new browser and type http://the-pip:5000
+5. from the ec2 panel scroll right to PIP and copy the public ip and open in new browser and type http://yourPip:5000
 6. and that its, enjoyyy! 
 ---
 ## notes
