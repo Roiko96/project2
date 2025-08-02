@@ -95,4 +95,9 @@ no css or frontend styling, only the logic and one template.
 - index.html is basic and not styled  
 - backend logic only !
 - no database or login, just in memory list  
-- no css/js used  
+- no css/js used
+
+<img width="553" height="975" alt="Screenshot 2025-08-02 215112" src="https://github.com/user-attachments/assets/b8cec812-68cf-4b26-9cfd-1fe9a207be04" />
+<img width="1289" height="730" alt="Screenshot 2025-08-02 214241" src="https://github.com/user-attachments/assets/94647037-53f9-4792-84c8-476fb2e6c6a3" />
+<img width="876" height="903" alt="Screenshot 2025-08-02 214324" src="https://github.com/user-attachments/assets/de8d33e2-3f82-4986-b35f-988562bb0475" />
+<img width="1340" height="952" alt="Screenshot 2025-08-02 214613" src="https://github.com/user-attachments/assets/fc754707-2c3d-4176-854b-10c6a0f58ec4" />
