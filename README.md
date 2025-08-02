@@ -81,15 +81,15 @@ no css or frontend styling, only the logic and one template.
    pwd (you need to be at main folder called project2)
    ```
   
-3. running the appp:
+3. go to ec2 sg group of the relevant instance and edit inbound rules and add tcp method connection for 0.0.0.0 port 5000
+  
+4. running the appp:
    ```
    python app.py
    ```
-4. go to ec2 sg group of the relevant instance and edit inbound rules and add tcp method connection for 0.0.0.0 port 5000
 5. from the ec2 panel scroll right to PIP and copy the public ip and open in new browser and type http://the-pip:5000
 6. and that its, enjoyyy! 
 ---
-
 ## notes
 
 - tested on python 3.12  
