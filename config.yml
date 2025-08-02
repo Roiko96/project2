@@ -3,7 +3,8 @@ global:
   default_platform: Python 3.12 running on 64bit Amazon Linux 2023
   default_region: eu-west-1
   profile: eb-cli
-  workspace_type: Applicatio
+  workspace_type: Application
+
 
 
   # to run it : eb init & eb create game-score-env & eb deploy
