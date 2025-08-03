@@ -37,7 +37,7 @@ no css or frontend styling, only the logic and one template.
    ```
       sudo su
    apt update && apt upgrade -y
-   apt install python3-flask / apt install -r requirements.txt
+   apt install python3-flask / pip install -r requirements.txt
    mkdir templates
    mv index.html templates/
    cd templates/
