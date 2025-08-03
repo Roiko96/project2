@@ -1,14 +1,13 @@
-# app.py
 from flask import Flask, render_template, request, redirect
 from functions import scores, add_score_data, delete_score_by_name, sort_scores_by_key, calculate_average, edit_score_data
 
-app = Flask(__name__)
+app = Flask(__name__)  # יצירת מופע Flask
 
-@app.route("/")
+@app.route("/")  # דף הבית שמציג את הטבלה
 def index():
     return render_template("index.html", scores=scores)
 
-@app.route("/add", methods=["POST"])
+@app.route("/add", methods=["POST"])  # הוספת ציון חדש
 def add():
     name = request.form["name"]
     game = request.form["game"]
@@ -16,26 +15,26 @@ def add():
         score = float(request.form["score"])
         add_score_data(name, game, score)
     except ValueError:
-        pass
+        pass  # אם הקלט לא תקין מתעלמים
     return redirect("/")
 
-@app.route("/delete", methods=["POST"])
+@app.route("/delete", methods=["POST"])  # מחיקת שחקן לפי שם
 def delete():
     name = request.form["name"]
     delete_score_by_name(name)
     return redirect("/")
 
-@app.route("/sort/<key>")
+@app.route("/sort/<key>")  # מיון לפי שדה (name/game/score)
 def sort(key):
     sort_scores_by_key(key)
     return redirect("/")
 
-@app.route("/average")
+@app.route("/average")  # הצגת ממוצע
 def average():
     avg = calculate_average()
     return render_template("index.html", scores=scores, average=avg)
 
-@app.route("/edit", methods=["POST"])
+@app.route("/edit", methods=["POST"])  # עריכת ציון
 def edit():
     current_name = request.form["current_name"]
     current_game = request.form["current_game"]
@@ -49,4 +48,4 @@ def edit():
     return redirect("/")
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)  # הפעלת השרת בפורט 5000
