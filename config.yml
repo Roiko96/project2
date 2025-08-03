@@ -1,7 +1,7 @@
 global:
   application_name: game-scoreboard
-  default_platform: Python 3.12 running on 64bit Amazon Linux 2023
-  default_region: eu-west-1
+  default_platform: Python 3.12 running on ubuntu
+  default_region: us-east-1
   profile: eb-cli
   workspace_type: Application
 
