@@ -1,31 +1,26 @@
-# functions.py - קובץ עם כל הפונקציות הלוגיות של המשחק
-
-scores = []  # רשימה גלובלית לשמירת ניקודים
+# functions.py
+scores = []  # רשימת ניקוד גלובלית
 
 def add_score_data(name, game, score):
-    scores.append({"name": name, "game": game, "score": score})  # מוסיף רשומה חדשה
+    scores.append({"name": name, "game": game, "score": score})
 
 def delete_score_by_name(name):
     global scores
-    scores = [s for s in scores if s["name"] != name]  # מוחק לפי שם
+    scores = [s for s in scores if s["name"] != name]
 
 def sort_scores_by_key(key):
-    if key in ["name", "game", "score"]:  # מוודא שהמפתח חוקי
-        scores.sort(key=lambda x: x[key], reverse=(key == "score"))  # ממיין לפי מפתח
+    reverse = key == "score"
+    scores.sort(key=lambda x: x[key], reverse=reverse)
 
 def calculate_average():
     if not scores:
         return 0
-    return round(sum(p["score"] for p in scores) / len(scores), 2)  # מחזיר ממוצע
+    return sum(s["score"] for s in scores) / len(scores)
 
-def edit_score_by_name_and_game(name, game, new_name=None, new_game=None, new_score=None):
-    for player in scores:
-        if player["name"] == name and player["game"] == game:
-            if new_name:
-                player["name"] = new_name
-            if new_game:
-                player["game"] = new_game
-            if new_score is not None:
-                player["score"] = new_score
-            return True
-    return False
+def edit_score_data(current_name, current_game, new_name, new_game, new_score):
+    for s in scores:
+        if s["name"] == current_name and s["game"] == current_game:
+            s["name"] = new_name
+            s["game"] = new_game
+            s["score"] = new_score
+            break
