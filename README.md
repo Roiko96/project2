@@ -43,7 +43,6 @@ no css or frontend styling, only the logic and one template.
    cd templates/
    ll -lhtar
    cd ..
-   cd ..
    pwd (you need to be at main folder called project2)
    ```
   
