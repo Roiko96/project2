@@ -29,39 +29,6 @@ no css or frontend styling, only the logic and one template.
 
 ---
 
-## how to run locally
-
-1. install flask:
-   ```
-   pip install -r requirements.txt
-   ```
-
-2. run the app:
-   ```
-   python app.py
-   ```
-
-3. open browser:
-   ```
-   http://localhost:5000
-   ```
-
----
-
-## how to run with docker
-
-1. build image:
-   ```
-   docker build -t game-scoreboard .
-   ```
-
-2. run container:
-   ```
-   docker run -it game-scoreboard
-   ```
-
----
-
 ## how to deploy to aws (elastic beanstalk)
 
 1. open cloud9.
