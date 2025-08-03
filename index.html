@@ -7,7 +7,7 @@
 <body>
     <h1>Game Scoreboard</h1>
 
-    <!-- הוספת שחקן -->
+    <!-- טופס להוספת שחקן -->
     <h2>Add Score</h2>
     <form action="/add" method="post">
         Name: <input type="text" name="name" required><br>
@@ -16,20 +16,20 @@
         <button type="submit">Add</button>
     </form>
 
-    <!-- מחיקת שחקן -->
+    <!-- טופס למחיקה -->
     <h2>Delete Score</h2>
     <form action="/delete" method="post">
         Name: <input type="text" name="name" required>
         <button type="submit">Delete</button>
     </form>
 
-    <!-- מיון -->
+    <!-- טפסים למיון -->
     <h2>Sort</h2>
     <form action="/sort/name" method="get"><button type="submit">Sort by Name</button></form>
     <form action="/sort/game" method="get"><button type="submit">Sort by Game</button></form>
     <form action="/sort/score" method="get"><button type="submit">Sort by Score</button></form>
 
-    <!-- עריכת שחקן -->
+    <!-- טופס לעריכה -->
     <h2>Edit Score</h2>
     <form action="/edit" method="post">
         Current Name: <input type="text" name="current_name" required><br>
@@ -50,7 +50,7 @@
         <h3>Average Score: {{ average | round(2) }}</h3>
     {% endif %}
 
-    <!-- רשימת שחקנים -->
+    <!-- רשימת ניקוד -->
     <h2>Scores List</h2>
     {% if scores %}
         <ul>
