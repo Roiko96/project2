@@ -1,6 +1,6 @@
 # game scoreboard – flask project
 
-author: roi taba  
+author: roiko
 course: devops – technion 2025
 
 ## description
